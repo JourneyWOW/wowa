@@ -9,9 +9,9 @@ const log = console.log
 
 let src = {
   $api: {
-    curse: require('./curse'),
+    //curse: require('./curse'),
     mmoui: require('./mmoui'),
-    tukui: require('./tukui'),
+    //tukui: require('./tukui'),
     github: require('./github'),
     git: require('./git')
   },
@@ -160,16 +160,16 @@ let src = {
 
   summary(done) {
     let db = []
-    src.$api.curse.summary(d => {
-      db = db.concat(d)
+    //src.$api.curse.summary(d => {
+    //  db = db.concat(d)
       src.$api.mmoui.summary(d => {
         db = db.concat(d)
-        src.$api.tukui.summary(d => {
-          db = db.concat(d)
+        //src.$api.tukui.summary(d => {
+        //  db = db.concat(d)
           done(db)
         })
-      })
-    })
+      //})
+    //})
   },
 
   getDB(filter, done) {
